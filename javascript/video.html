@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video</title>
+    <script>
+        function playPause(){
+            var Myvideo = document.getElementById("intro");
+         if(Myvideo.paused){
+            Myvideo.play();
+         }else{
+            Myvideo.pause();
+         }
+
+         }
+        
+         function normalscreen(){
+            var Myvideo = document.getElementById("intro");
+            Myvideo.width=500;
+         }
+
+         function smallscreen(){
+            var Myvideo = document.getElementById("intro");
+            Myvideo.width=300;
+         }
+
+         function bigscreen(){
+            var Myvideo = document.getElementById("intro");
+            Myvideo.width=700;
+         }
+
+
+
+
+    </script>
+</head>
+<body>
+    <div>
+        <video id="intro" width="500px">
+          <source src="assets/org img.mp4">
+        </video> 
+        <br/><br/>
+        <button onclick="playPause()">Play/Pause</button>
+        <button onclick="normalscreen()">Normal Screen</button>
+        <button onclick="smallscreen()">Small Screen</button>
+        <button onclick="bigscreen()">Big Screen</button>
+    </div>
+
+</body>
+</html>

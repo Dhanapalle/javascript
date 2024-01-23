@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin:0;
+            padding: 0;
+        }
+
+    .container{
+        position: absolute;
+        top:150%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    ul.thumb{
+        margin: 0 auto;
+        padding:0;
+        float:left;
+    }
+
+    ul.thumb li{
+        list-style: none;
+        margin:5px;
+        width: 100px;
+        height: 100px;
+        border:1px solid rgba(0,0,0,.2);
+        overflow:hidden;
+    }
+
+    ul.thumb li img{
+        width:100%;
+    }
+
+    .imgbox{
+        float:left;
+        width:500px;
+        height: 500px;
+        margin: 5px;
+        border:1px solid rgba(0,0,0,.2);
+        overflow: hidden;
+    }
+    .imgBox img{
+        width:100%;
+       
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="thumb">
+            <li><a href="assets/1.webp" target="imgbox"><img src="assets/1.webp"></a></li>
+            <li><a href="assets/2.webp" target="imgbox"><img src="assets/2.webp"></a></li>
+            <li><a href="assets/3.webp" target="imgbox"><img src="assets/3.webp"></a></li>
+        </ul>
+        <div class="imgBox"><img src="assets/1.webp"></div>
+    </div>
+    <script>
+     src="https://code.jquery.com/jquery-3.6.1.js"</script>
+     <script type="text/javascript">
+        $(document).ready(function(){
+            $('.thumb a').mouseover(function(){
+                e.preventDefault();
+                $('.imgBox img').attr("src",$(this).attr("href"));
+            
+            })
+        })
+     </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+			content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<style>
+ 
+    .button{
+    margin-left: 40%;
+    }
+</style>
+
+
+<script>
+    function before(){
+        document.getElementById('myImage')
+        .src="assets/c6.jpeg";
+        // .src="assets/c5.jpg";
+        document.getElementById('message')
+        .innerHTML="In this example, you will learn to generate the multiplication table of a number in JavaScript.";
+    }
+     
+    function afterr(){
+        document.getElementById('myImage')
+        .src="assets/c5.jpg";
+        document.getElementById('message')
+        .innerHTML="In this example, you will learn to generate the multiplication table of a number in JavaScript.";
+    }
+</script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+			<h1 id="message">
+				In this example, you will learn to generate the multiplication table of a number in JavaScript.
+			</h1>
+			<img id="myImage"
+					src="assets/c5.jpg" >
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+	</div>
+    <br><br>
+	<div class="button">
+		<button class="btn btn-warning"
+				onclick=before();>
+			Before
+		</button>
+		<button class="btn btn-success"
+				onclick=afterr();>
+			Afterr
+		</button>
+	</div>
+</body>
+</html>
